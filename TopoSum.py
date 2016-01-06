@@ -51,7 +51,7 @@ def calc_dem_bins():
     bin5 = elev_max
         
     # Initialize counters
-    bin1count,bin2count,bin3count,bin4count,bin5count = 0,0,0,0,0
+    bin1count, bin2count, bin3count, bin4count, bin5count = 0, 0, 0, 0, 0
     count = 0.0
     
     for i in range(size_i):
