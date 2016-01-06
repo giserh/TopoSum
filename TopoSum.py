@@ -30,8 +30,8 @@ def ReadDEM():
     print ''
     
 def calc_dem_bins():
-    elev_max = 0
-    elev_min = 10000
+    elev_max = -10000 #initiate max (will be overridden by greater and greater values)
+    elev_min = 10000 #initiate min (will be overridden by smaller and smaller values)
     elev_range = 0
     for i in range(size_i):
         for j in range(size_j):
