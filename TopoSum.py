@@ -5,8 +5,8 @@
 import math
 
 DEM = []        # DEM begins as an empty list
-SLOPE = []
-ASPECT = []
+SLOPE = []      # Slope begins as an empty list
+ASPECT = []     # Aspect begins as an empty list
 
 size_i = 300
 size_j = 300
@@ -30,8 +30,8 @@ def ReadDEM():
     print ''
     
 def calc_dem_bins():
-    elev_max = -10000 #initiate max (will be overridden by greater and greater values)
-    elev_min = 10000 #initiate min (will be overridden by smaller and smaller values)
+    elev_max = -10000 # Initiate max (will be overridden by greater and greater values)
+    elev_min = 10000 # Initiate min (will be overridden by smaller and smaller values)
     elev_range = 0
     for i in range(size_i):
         for j in range(size_j):
@@ -43,7 +43,7 @@ def calc_dem_bins():
     elev_range = elev_max - elev_min
     
     #Define bins
-    bin_size = elev_range/5
+    bin_size = elev_range / 5
     bin1 = elev_min + bin_size
     bin2 = bin1 + bin_size
     bin3 = bin2 + bin_size
