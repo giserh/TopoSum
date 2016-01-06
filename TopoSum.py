@@ -145,10 +145,11 @@ def calc_slope_bins():
             if SLOPE[i][j] < slope_min:
                 slope_min = SLOPE[i][j]
                 
-    #Initialize counters
+    # Initialize counters
     bin1count,bin2count,bin3count,bin4count = 0,0,0,0
     count = 0.0
     
+    # Count bins
     for i in range(1, size_i - 1):
         for j in range(1, size_j - 1):
             count += 1
