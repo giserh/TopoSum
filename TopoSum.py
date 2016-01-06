@@ -14,7 +14,7 @@ size_j = 300
 def ReadDEM():
     DEM_file = open('UU_DEM.txt','r') # Specify DEM to read
 
-    # Read elevation values from textfile into a 2D array
+    # Read elevation values from text file into a 2D array
     for line in DEM_file:
         #Set all to elevation just for structure; replace later
         DEM.append(line.split())
@@ -42,7 +42,7 @@ def calc_dem_bins():
                 
     elev_range = elev_max - elev_min
     
-    #Define bins
+    # Define bins
     bin_size = elev_range / 5
     bin1 = elev_min + bin_size
     bin2 = bin1 + bin_size
@@ -50,7 +50,7 @@ def calc_dem_bins():
     bin4 = bin3 + bin_size
     bin5 = elev_max
         
-    #Initialize counters
+    # Initialize counters
     bin1count,bin2count,bin3count,bin4count,bin5count = 0,0,0,0,0
     count = 0.0
     
@@ -70,7 +70,7 @@ def calc_dem_bins():
             else:
                 print "Error"
     
-    #Calculate percentages
+    # Calculate percentages
     bin1pct = round(100*bin1count/count,1)
     bin2pct = round(100*bin2count/count,1)
     bin3pct = round(100*bin3count/count,1)
@@ -88,7 +88,7 @@ def calc_dem_bins():
     print ''
 
 def calc_slope_aspect():
-    d = 10 #set spacing to 10 m
+    d = 10 # Set spacing to 10 m
     for r in range(1, size_i - 1): #row
         for c in range(1, size_j - 1): #column
             bb = (DEM[r-1][c+1] + 2*DEM[r][c+1] + DEM[r+1][c+1] - DEM[r-1][c-1] - 2*DEM[r][c-1] - DEM[r+1][c-1])/(8*d)
@@ -113,7 +113,7 @@ def calc_slope_aspect():
             #replace each row and column with aspect value            
             ASPECT[r][c] = a    
     
-    #trim borders
+    # Trim borders where slope and aspect can't be computed
     for i in range(size_i):
         for j in range(size_j):
             SLOPE[0][j] = None #top edge
