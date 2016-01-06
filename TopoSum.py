@@ -12,7 +12,7 @@ size_i = 300
 size_j = 300
 
 def ReadDEM():
-    DEM_file = open('UU_DEM.txt','r')
+    DEM_file = open('UU_DEM.txt','r') #specify DEM to read
 
     # Read elevation values from textfile into a 2D array
     for line in DEM_file:
