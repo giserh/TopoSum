@@ -77,6 +77,8 @@ def calc_dem_bins():
     bin4pct = round(100*bin4count/count,1)
     bin5pct = round(100*bin5count/count,1)
     
+    
+    # Report bins
     print 'Elevation range:',elev_min,'to',elev_max
     print 'Difference:',elev_range
     print 'Bin size:',bin_size
