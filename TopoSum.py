@@ -4,9 +4,9 @@
 
 import math
 
-DEM = []        # DEM begins as an empty list
-SLOPE = []      # Slope begins as an empty list
-ASPECT = []     # Aspect begins as an empty list
+DEM = []        # DEM begins as an empty list...
+SLOPE = []      # Slope begins as an empty list...
+ASPECT = []     # Aspect begins as an empty list...
 
 size_i = 300
 size_j = 300
