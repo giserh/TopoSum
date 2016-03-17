@@ -2,7 +2,7 @@
 
 Rob Sowby
 
-Reads a DEM and summarizes statistics on elevation, slope, and aspect
+Reads a DEM and summarizes statistics on elevation, slope, and aspect.
 
 Sample output:
 
