@@ -1,7 +1,5 @@
 #TopoSum
 
-Rob Sowby
-
 Reads a text file DEM and summarizes statistics on elevation, slope, and aspect.
 
 Sample output:
